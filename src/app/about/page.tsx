@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About — Your Name",
+  title: "About — Lahari Avadhanam",
 };
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-16 sm:px-8">
-      <h1 className="text-2xl font-semibold tracking-tight">About</h1>
-      <div className="mt-6 flex flex-col gap-4 text-zinc-600 dark:text-zinc-400">
+      <h1 className="text-2xl font-semibold tracking-tight text-text-primary">About</h1>
+      <div className="mt-6 flex flex-col gap-4 text-text-secondary">
         <p>
-          I&apos;m Your Name, a [your role, e.g. product designer / software engineer]
-          based in [your city]. I care about building things that are simple,
-          functional, and considered.
+          I&apos;m Lahari Avadhanam, a product designer and visual storyteller.
+          I care about building things that are simple, functional, and considered.
         </p>
         <p>
           Replace this paragraph with a bit more about your background,
@@ -27,19 +26,19 @@ export default function AboutPage() {
       <div className="mt-10 flex gap-4 text-sm">
         <a
           href="mailto:you@example.com"
-          className="rounded-full border border-black/[.08] px-4 py-2 transition-colors hover:border-black/[.16] dark:border-white/[.12] dark:hover:border-white/[.24]"
+          className="rounded-full border border-border-default px-4 py-2 text-text-primary transition-colors hover:border-text-muted"
         >
           Email
         </a>
         <a
           href="https://github.com/your-username"
-          className="rounded-full border border-black/[.08] px-4 py-2 transition-colors hover:border-black/[.16] dark:border-white/[.12] dark:hover:border-white/[.24]"
+          className="rounded-full border border-border-default px-4 py-2 text-text-primary transition-colors hover:border-text-muted"
         >
           GitHub
         </a>
         <a
           href="https://linkedin.com/in/your-username"
-          className="rounded-full border border-black/[.08] px-4 py-2 transition-colors hover:border-black/[.16] dark:border-white/[.12] dark:hover:border-white/[.24]"
+          className="rounded-full border border-border-default px-4 py-2 text-text-primary transition-colors hover:border-text-muted"
         >
           LinkedIn
         </a>

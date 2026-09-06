@@ -2,19 +2,15 @@ import Link from "next/link";
 
 export function Nav() {
   return (
-    <header className="border-b border-black/[.08] dark:border-white/[.12]">
-      <nav className="mx-auto flex max-w-3xl items-center justify-between px-6 py-6 sm:px-8">
-        <Link href="/" className="text-sm font-semibold tracking-tight">
-          Your Name
+    <header>
+      <nav className="flex items-center justify-center gap-3 py-8 text-sm text-text-primary">
+        <Link href="/" className="hover:text-text-secondary transition-colors">
+          Work
         </Link>
-        <div className="flex gap-6 text-sm text-zinc-600 dark:text-zinc-400">
-          <Link href="/" className="hover:text-foreground transition-colors">
-            Work
-          </Link>
-          <Link href="/about" className="hover:text-foreground transition-colors">
-            About
-          </Link>
-        </div>
+        <span className="h-1 w-1 rounded-full bg-bordeaux-500" aria-hidden="true" />
+        <Link href="/about" className="hover:text-text-secondary transition-colors">
+          About
+        </Link>
       </nav>
     </header>
   );

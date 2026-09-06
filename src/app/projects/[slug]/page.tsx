@@ -12,7 +12,7 @@ export async function generateMetadata({
 }: PageProps<"/projects/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
-  return { title: project ? `${project.title} — Your Name` : "Project not found" };
+  return { title: project ? `${project.title} — Lahari Avadhanam` : "Project not found" };
 }
 
 export default async function ProjectPage({
@@ -29,30 +29,32 @@ export default async function ProjectPage({
     <div className="mx-auto max-w-3xl px-6 py-16 sm:px-8">
       <Link
         href="/"
-        className="text-sm text-zinc-500 hover:text-foreground transition-colors"
+        className="text-sm text-text-muted hover:text-text-primary transition-colors"
       >
         &larr; Back to work
       </Link>
 
       <div className="mt-6 flex items-baseline justify-between">
-        <h1 className="text-2xl font-semibold tracking-tight">{project.title}</h1>
-        <span className="text-sm text-zinc-500">{project.year}</span>
+        <h1 className="text-2xl font-semibold tracking-tight text-text-primary">
+          {project.title}
+        </h1>
+        <span className="text-sm text-text-muted">{project.year}</span>
       </div>
 
-      <p className="mt-2 text-sm text-zinc-500">{project.role}</p>
+      <p className="mt-2 text-sm text-text-muted">{project.role}</p>
 
       <div className="mt-4 flex flex-wrap gap-2">
         {project.stack.map((tech) => (
           <span
             key={tech}
-            className="rounded-full bg-black/[.04] px-2.5 py-1 text-xs text-zinc-600 dark:bg-white/[.08] dark:text-zinc-400"
+            className="rounded-full bg-bg-secondary px-2.5 py-1 text-xs text-text-secondary"
           >
             {tech}
           </span>
         ))}
       </div>
 
-      <div className="mt-8 flex flex-col gap-4 text-zinc-600 dark:text-zinc-400">
+      <div className="mt-8 flex flex-col gap-4 text-text-secondary">
         {project.description.map((paragraph, i) => (
           <p key={i}>{paragraph}</p>
         ))}
@@ -65,7 +67,7 @@ export default async function ProjectPage({
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-black/[.08] px-4 py-2 transition-colors hover:border-black/[.16] dark:border-white/[.12] dark:hover:border-white/[.24]"
+              className="rounded-full border border-border-default px-4 py-2 text-text-primary transition-colors hover:border-text-muted"
             >
               Live site
             </a>
@@ -75,7 +77,7 @@ export default async function ProjectPage({
               href={project.repoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-black/[.08] px-4 py-2 transition-colors hover:border-black/[.16] dark:border-white/[.12] dark:hover:border-white/[.24]"
+              className="rounded-full border border-border-default px-4 py-2 text-text-primary transition-colors hover:border-text-muted"
             >
               Source
             </a>

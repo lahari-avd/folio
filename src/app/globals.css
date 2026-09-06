@@ -96,8 +96,8 @@
   --color-danger-subtle: var(--bordeaux-50);
 
   /* Fonts */
-  --font-editorial: 'PP Editorial', Georgia, serif;
-  --font-mori: 'PP Mori', -apple-system, sans-serif;
+  --font-editorial: var(--font-editorial-loaded), Georgia, serif;
+  --font-mori: var(--font-mori-loaded), -apple-system, sans-serif;
 
   /* Type scale */
   --text-xs: 0.75rem;
